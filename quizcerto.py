@@ -6,8 +6,8 @@ questionario = [
 {"id":3,"pergunta":"Qual estrutura funciona em FIFO?","altA":"Pilha","altB":"Fila","altC":"Lista","altD":"Tupla","altE":"Dicionário","altCorreta":"B"},
 ]
 
-resposta = []
 acertos = 0
+erros = 0
 
 for q in questionario:
 
@@ -26,9 +26,7 @@ for q in questionario:
     else:
         print("Resposta errada")
         print("Alternativa correta:", q["altCorreta"])
-
-for i in resposta:
-    print(resposta)
+        erros += 1
 
 print("Total de acertos:", acertos)
-print("Total de erros:", len(questionario) - acertos)
+print("Total de erros:", erros)
